@@ -4,12 +4,14 @@ public static void main(String args[]){
 	
 
 int Wage_per_hr=20;
-int Daily_wage=0;
-int Working_days=20;
+int Working_days=1;
 int totalEmpHrs = 0;
 int emphrs;
-	for (int i=1;i<=Working_days;i++)
+
+	do
 {
+	
+
 	int emplCheck = (int) (Math.floor(Math.random () * 10 ) % 3) ;
 	switch(emplCheck) 
 {
@@ -31,8 +33,12 @@ int emphrs;
 	
 }
 	totalEmpHrs= totalEmpHrs + emphrs;
-	System.out.println(" the total hours  is " + totalEmpHrs );
+        System.out.println(" the total hours  is "  + totalEmpHrs );
+	Working_days++;
 }
+
+ while (totalEmpHrs<100 && Working_days<=20);
+
 	int wage = totalEmpHrs * Wage_per_hr;
 	System.out.println(" the wage for the month is " + wage );
 	}
