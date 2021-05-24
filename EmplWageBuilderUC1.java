@@ -5,30 +5,36 @@ public static void main(String args[]){
 
 int Wage_per_hr=20;
 int Daily_wage=0;
-
-int emplCheck = (int) (Math.floor(Math.random () * 10 ) % 3) ;
-
+int Working_days=20;
+int totalEmpHrs = 0;
+int emphrs;
+	for (int i=1;i<=Working_days;i++)
+{
+	int emplCheck = (int) (Math.floor(Math.random () * 10 ) % 3) ;
 	switch(emplCheck) 
 {
 	case  1:
 	
-	Daily_wage = Wage_per_hr * 8 ;
-	System.out.println(" the daily wage of employee is " + Daily_wage );
-	System.out.println("Employee is present");
+	 emphrs = 8 ;
+	
 	break;
 
 	case 2:
 	
-	Daily_wage = Wage_per_hr * 4;
-	System.out.println(" the daily wage of employee is " + Daily_wage );
-	System.out.println("Employee is part timmer");
+	 emphrs = 4;
+	
 	break;
 
 	default:
 
-	System.out.println("employee is absent");
+	 emphrs = 0;
 	
 }
+	totalEmpHrs= totalEmpHrs + emphrs;
+	System.out.println(" the total hours  is " + totalEmpHrs );
+}
+	int wage = totalEmpHrs * Wage_per_hr;
+	System.out.println(" the wage for the month is " + wage );
 	}
 
 	}
